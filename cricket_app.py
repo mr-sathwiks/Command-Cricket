@@ -61,7 +61,7 @@ print("\n\nALL THE BEST","\n\t\tfrom Team COMMAND CRICKET\n\n")
 coin=[1,2]
 action=["bat","bowl"]
 c_toss=random.choice(coin)
-print(c_toss)
+#print(c_toss)
 #user toss choice
 print("Call for toss\n heads--> 1\n tails--> 2")
 while True:
@@ -74,7 +74,7 @@ while True:
 			print("You choose to bat\n")
 			for i in range(0,wickets):
 				print(f"Batting by {uplayers[i]}")
-				user_s,finished_ball=modules.u_batting(balls)
+				user_s,finished_ball=cricket_app_module.u_batting(balls)
 				balls-=finished_ball
 				uscore.append(user_s)
 				final_user_s+=uscore[i]
@@ -83,7 +83,7 @@ while True:
 
 			for i in range(0,wickets):
 				print(f"Batting by computer{i+1}")
-				comp_s,finished_ball=modules.u_bowling(ball1)
+				comp_s,finished_ball=cricket_app_module.u_bowling(ball1)
 				ball1-=finished_ball
 				cscore.append(comp_s)
 				final_comp_s+=cscore[i]
@@ -94,7 +94,7 @@ while True:
 			print("You choose to bowl\n")
 			for i in range(0,wickets):
 				print(f"Batting by computer{i+1}")
-				comp_s,finished_ball=modules.u_bowling(ball1)
+				comp_s,finished_ball=cricket_app_module.u_bowling(ball1)
 				ball1-=finished_ball
 				cscore.append(comp_s)
 				final_comp_s+=cscore[i]
@@ -103,7 +103,7 @@ while True:
 
 			for i in range(0,wickets):
 				print(f"Batting by {uplayers[i]}")
-				user_s,finished_ball=modules.u_batting(balls)
+				user_s,finished_ball=cricket_app_module.u_batting(balls)
 				balls-=finished_ball
 				uscore.append(user_s)
 				final_user_s+=uscore[i]
@@ -124,7 +124,7 @@ while True:
 			for i in range(0,wickets):
 				print(f"Batting by computer{i+1}")
 				print(ball1)
-				comp_s,finished_ball=modules.u_bowling(ball1)
+				comp_s,finished_ball=cricket_app_module.u_bowling(ball1)
 				ball1-=finished_ball
 				cscore.append(comp_s)
 				final_comp_s+=cscore[i]
@@ -134,7 +134,7 @@ while True:
 			for i in range(0,wickets):
 				print(f"Batting by {uplayers[i]}")
 				print(balls)
-				user_s,finished_ball=modules.u_batting(balls)
+				user_s,finished_ball=cricket_app_module.u_batting(balls)
 				balls-=finished_ball
 				uscore.append(user_s)
 				final_user_s+=uscore[i]
@@ -146,7 +146,7 @@ while True:
 			for i in range(0,wickets):
 				print(f"Batting by {uplayers[i]}")
 				print(balls)
-				user_s,finished_ball=modules.u_batting(balls)
+				user_s,finished_ball=cricket_app_module.u_batting(balls)
 				balls-=finished_ball
 				uscore.append(user_s)
 				final_user_s+=uscore[i]
@@ -156,7 +156,7 @@ while True:
 			for i in range(0,wickets):
 				print(f"Batting by computer{i+1}")
 				print(ball1)
-				comp_s,finished_ball=modules.u_bowling(ball1)
+				comp_s,finished_ball=cricket_app_module.u_bowling(ball1)
 				ball1-=finished_ball
 				cscore.append(comp_s)
 				final_comp_s+=cscore[i]
