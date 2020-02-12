@@ -58,9 +58,13 @@ for i in range(0,wickets):
 	uplayers.append(input(f"Enter player{i+1} name: "))
 print("\n\nALL THE BEST","\n\t\tfrom Team COMMAND CRICKET\n\n")
 
-coin=[1,2]
+number_s=list(range(0,200))
+
 action=["bat","bowl"]
-c_toss=random.choice(coin)
+number_n=random.choice(number_s)
+c_toss=number_n%2
+if c_toss==0:
+	c_toss=2
 #print(c_toss)
 #user toss choice
 print("Call for toss\n heads--> 1\n tails--> 2")
@@ -165,7 +169,7 @@ while True:
 
 
 
-	elif u_toss not in coin:
+	elif u_toss!=1 & u_toss!=2:
 		print("Invalid i/p")
 		continue
 
