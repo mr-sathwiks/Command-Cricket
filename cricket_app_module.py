@@ -3,7 +3,7 @@
 
 
 import random
-run=[1,2,3,4,5,6]
+run=list(range(1,1000))
 cnt=0
 
 def u_batting(balls):
@@ -14,8 +14,12 @@ def u_batting(balls):
 	for i in range(0,balls):
 		
 		print("-"*20)
-		cball=random.choice(run)
-		
+
+		run_n=random.choice(run)
+		cball= run_n%6
+		if cball==0:
+			cball=6
+
 		ubat=int(input("Enter number 1-6: "))
 		print(f"\nComputer choice(comp_bowl): {cball}")
 		print(f"User choice(user_bat): {ubat}")
@@ -41,8 +45,13 @@ def u_bowling(balls):
 	for i in range(0,balls):
 		
 		print("-"*20)
-		cbat=random.choice(run)
+
+		run_n=random.choice(run)
+		cbat= run_n%6
+		if cbat==0:
+			cbat=6
 		
+
 		uball=int(input("Enter number 1-6: "))
 		print(f"\nComputer choice(comp_bat): {cbat}")
 		print(f"User choice(user_bowl): {uball}")
